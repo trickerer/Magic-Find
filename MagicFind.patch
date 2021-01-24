@@ -1,7 +1,7 @@
-From 8a388cf3adfc21890a2b35aa1cb747e44977ebf5 Mon Sep 17 00:00:00 2001
+From 303d9ef50be3c2fb8b0d35a968ed06521c2da4f1 Mon Sep 17 00:00:00 2001
 From: trickerer <onlysuffering@gmail.com>
-Date: Mon, 21 Dec 2020 10:38:48 +0700
-Subject: [PATCH] Magic Find 2020
+Date: Sun, 24 Jan 2021 16:38:16 +0700
+Subject: [PATCH] MagicFind
 
 ---
  src/server/game/Loot/Loot.cpp                |   7 +-
@@ -41,7 +41,7 @@ index 3cd0762..efd6203 100644
                                                                      // Setting access rights for group loot case
      Group* group = lootOwner->GetGroup();
 diff --git a/src/server/game/Loot/LootMgr.cpp b/src/server/game/Loot/LootMgr.cpp
-index 33110f4..0629f9c 100644
+index 8773076..052ecce 100644
 --- a/src/server/game/Loot/LootMgr.cpp
 +++ b/src/server/game/Loot/LootMgr.cpp
 @@ -30,6 +30,8 @@
@@ -861,7 +861,7 @@ index 0000000..9e3c9c1
 +
 +#endif
 diff --git a/src/server/game/World/World.cpp b/src/server/game/World/World.cpp
-index 15b2e89..1d6c843 100644
+index 5e07e6b..96ad308 100644
 --- a/src/server/game/World/World.cpp
 +++ b/src/server/game/World/World.cpp
 @@ -91,6 +91,8 @@
@@ -873,7 +873,7 @@ index 15b2e89..1d6c843 100644
  TC_GAME_API std::atomic<bool> World::m_stopEvent(false);
  TC_GAME_API uint8 World::m_ExitCode = SHUTDOWN_EXIT_CODE;
  
-@@ -1922,6 +1924,9 @@ void World::SetInitialWorldSettings()
+@@ -1941,6 +1943,9 @@ void World::SetInitialWorldSettings()
      // Loot tables
      LoadLootTables();
  
@@ -884,10 +884,10 @@ index 15b2e89..1d6c843 100644
      LoadSkillDiscoveryTable();
  
 diff --git a/src/server/worldserver/worldserver.conf.dist b/src/server/worldserver/worldserver.conf.dist
-index b364635..d8f61d6 100644
+index 6a51d91..70f007c 100644
 --- a/src/server/worldserver/worldserver.conf.dist
 +++ b/src/server/worldserver/worldserver.conf.dist
-@@ -4084,3 +4084,51 @@ Metric.OverallStatusInterval = 1
+@@ -4089,3 +4089,51 @@ Metric.OverallStatusInterval = 1
  
  #
  ###################################################################################################
